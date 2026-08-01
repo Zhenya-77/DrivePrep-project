@@ -1,0 +1,47 @@
+.section {
+  width: 100%;
+  padding-block: 32px;
+}
+
+.layout {
+  display: grid;
+  gap: 32px;
+}
+
+.content {
+  min-width: 0;
+}
+
+.sidebar {
+  min-width: 0;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .section {
+    padding-block: 48px;
+  }
+
+  .layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+    align-items: start;
+    gap: 40px;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 24px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-block: 64px;
+  }
+
+  .layout {
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 56px;
+  }
+}

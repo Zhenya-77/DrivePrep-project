@@ -1,0 +1,305 @@
+.main {
+  width: 100%;
+  padding-block: 32px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  padding: 24px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+
+  background-color: var(--color-surface);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+
+  text-align: center;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+  background-color: var(--color-primary);
+
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title {
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.email {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 20px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+
+  background-color: var(--color-surface);
+}
+
+.statValue {
+  color: var(--color-primary);
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statLabel {
+  color: var(--color-text-secondary);
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.primaryLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: background-color 200ms ease, color 200ms ease,
+    border-color 200ms ease, transform 200ms ease;
+}
+
+.primaryLink {
+  color: #ffffff;
+  background-color: var(--color-primary);
+}
+
+.primaryLink:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.primaryLink:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.primaryLink:active {
+  transform: scale(0.98);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 80px;
+
+  overflow: hidden;
+  border-radius: 50%;
+
+  background-color: #2563eb;
+  color: #ffffff;
+
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.editLink {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.editLink:hover {
+  color: #1d4ed8;
+  transform: translateX(2px);
+}
+
+.editLink:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding-block: 48px;
+  }
+
+  .profile {
+    gap: 40px;
+  }
+
+  .profileHeader {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+
+    padding: 32px;
+
+    text-align: left;
+  }
+
+  .avatar {
+    width: 88px;
+    height: 88px;
+
+    font-size: 34px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .email {
+    font-size: 16px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .statCard {
+    padding: 24px;
+  }
+
+  .statValue {
+    font-size: 36px;
+  }
+
+  .actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .primaryLink {
+    min-width: 180px;
+    min-height: 50px;
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1280px) {
+  .main {
+    padding-block: 64px;
+  }
+
+  .profile {
+    gap: 48px;
+  }
+
+  .profileHeader {
+    padding: 40px;
+  }
+
+  .avatar {
+    width: 104px;
+    height: 104px;
+
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .email {
+    font-size: 17px;
+  }
+
+  .stats {
+    gap: 24px;
+  }
+
+  .statCard {
+    padding: 28px;
+  }
+
+  .statValue {
+    font-size: 40px;
+  }
+
+  .statLabel {
+    font-size: 16px;
+  }
+
+  .primaryLink {
+    min-width: 200px;
+    min-height: 52px;
+
+    font-size: 17px;
+  }
+}

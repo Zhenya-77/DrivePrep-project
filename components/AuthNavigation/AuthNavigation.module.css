@@ -1,0 +1,185 @@
+.authItem {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.profileLink,
+.signInLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #334155;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+
+  transition: color 200ms ease;
+}
+
+.profileLink:hover,
+.signInLink:hover {
+  color: #2563eb;
+}
+
+.profileLink:focus-visible,
+.signInLink:focus-visible,
+.signUpLink:focus-visible,
+.logoutButton:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+
+.userName {
+  max-width: 130px;
+  margin: 0;
+
+  overflow: hidden;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logoutButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+  padding: 8px 16px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background-color: #ffffff;
+  color: #334155;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: color 200ms ease, border-color 200ms ease,
+    background-color 200ms ease;
+}
+
+.logoutButton:hover {
+  border-color: #94a3b8;
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.signUpLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+  padding: 8px 16px;
+
+  border-radius: 8px;
+
+  background-color: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.signUpLink:hover {
+  background-color: #1d4ed8;
+}
+
+.authHidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .profileLink,
+  .signInLink {
+    font-size: 16px;
+  }
+
+  .userMenu {
+    gap: 14px;
+  }
+
+  .userName {
+    max-width: 160px;
+    font-size: 15px;
+  }
+
+  .logoutButton,
+  .signUpLink {
+    min-height: 40px;
+    padding: 9px 18px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  .userMenu {
+    gap: 16px;
+  }
+
+  .userName {
+    max-width: 190px;
+  }
+
+  .logoutButton:hover,
+  .signUpLink:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .authItem,
+  .userMenu {
+    width: 100%;
+  }
+
+  .profileLink,
+  .signInLink,
+  .signUpLink,
+  .logoutButton {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .profileLink,
+  .signInLink {
+    justify-content: flex-start;
+  }
+
+  .userMenu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .userName {
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
