@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers';
-import { NextServer } from './api';
 import { User } from './clientApi';
 import { backendApi } from '@/app/api/api';
 
@@ -48,7 +47,7 @@ export type CheckAnswerResponse = {
 
 export async function checkServerSession() {
   const cookieStore = await cookies();
-  const res = await NextServer.get('/auth/session', {
+  const res = await backendApi.get('/auth/session', {
     headers: {
       Cookie: cookieStore.toString(),
     },
@@ -71,7 +70,7 @@ export async function getServerMe(): Promise<User> {
 export async function getQuestionsByCategory(slug: string) {
   const cookieStore = await cookies();
 
-  const { data } = await NextServer.get<QuestionsResponse>(`/tests/${slug}`, {
+  const { data } = await backendApi.get<QuestionsResponse>(`/tests/${slug}`, {
     headers: {
       Cookie: cookieStore.toString(),
     },
