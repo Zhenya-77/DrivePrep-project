@@ -71,12 +71,6 @@ export async function logout(): Promise<void> {
   await NextServer.post('/auth/logout');
 }
 
-export async function getGategories() {
-  const res = await NextServer.get<Category[]>('/categories');
-
-  return res.data;
-}
-
 export async function getRulesBySlug(
   slug: string,
   page: number,

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import css from './Sidebar.module.css';
-import { getGategories } from '@/lib/api/clientApi';
+import { getServerCategories } from '@/lib/api/serverApi';
 
 export default async function RulesSidebar() {
-  const categories = await getGategories();
+  const categories = await getServerCategories();
 
   return (
     <ul className={css.list}>

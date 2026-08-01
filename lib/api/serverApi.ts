@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers';
 import { NextServer } from './api';
 import { User } from './clientApi';
+import { backendApi } from '@/app/api/api';
 
 export interface Category {
   title: string;
@@ -77,4 +78,15 @@ export async function getQuestionsByCategory(slug: string) {
   });
 
   return data;
+}
+
+export async function getServerCategories() {
+  const cookieStore = await cookies();
+  const res = await backendApi.get<Category[]>('/categories', {
+    headers: {
+      Cookie: cookieStore.toString(),
+    },
+  });
+
+  return res.data;
 }

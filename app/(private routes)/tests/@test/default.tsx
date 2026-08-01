@@ -1,8 +1,8 @@
 import TestCategorySelect from '@/components/TestCategorySelect/TestCategorySelect';
-import { getGategories } from '@/lib/api/clientApi';
+import { getServerCategories } from '@/lib/api/serverApi';
 
 export default async function Tests() {
-  const categories = await getGategories();
+  const categories = await getServerCategories();
 
   return <TestCategorySelect categories={categories} />;
 }
