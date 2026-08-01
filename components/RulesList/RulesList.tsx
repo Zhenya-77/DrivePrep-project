@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Pagination from '../Pagination/Pagination';
 import css from './RulesList.module.css';
 import Image from 'next/image';
+import Loader from '../Loader/Loader';
 
 type Props = {
   slug: string;
@@ -21,7 +22,7 @@ export default function RulesList({ slug }: Props) {
   });
 
   if (isLoading) {
-    return <p>Завантаження...</p>;
+    return <Loader />;
   }
 
   if (isError) {
