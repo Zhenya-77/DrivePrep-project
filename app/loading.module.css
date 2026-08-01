@@ -1,0 +1,26 @@
+.loader {
+  min-height: calc(100vh - 140px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  padding: 32px 16px;
+}
+
+.text {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 18px;
+  }
+}
